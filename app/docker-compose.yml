@@ -6,8 +6,6 @@ services:
     ports:
       - 3000:3000
     working_dir: /app
-    volumes:
-      - /home/fede/projects/getting-started-master/app/src:/app/src
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
