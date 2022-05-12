@@ -2,12 +2,13 @@ version : "3.7"
 
 services:
   app:
-    image: federico5costa/getting-started-compose-added
-    volumes:
-      - ./:/app/src
+    image: node:12-alpine
+    command: sh -c "yarn install && yarn run dev"
     ports:
       - 3000:3000
     working_dir: /app
+    volumes:
+      - ./app:/app
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
